@@ -85,6 +85,7 @@ class MotionServer:
         s_str = rospy.Service(
             'motion_service', MotionService, self.handle_motion)
         s_serv = rospy.Service('servo_service', ServoService, self.handle_servo)
+
         rospy.loginfo(f"Launched \033[92mwalk_service\033[0m, \033[92mservo_service\033[0m and \033[92mmotion_service\033[0m")
         
         while True:
